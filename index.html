@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+      @font-face {
+  font-family: HYWenHei;
+  src: url(https://raw.githubusercontent.com/TenkenNoSoujiro/TenkenNoSoujiro.github.io/main/genshin-impact.woff2) format("woff2"),
+    url(https://raw.githubusercontent.com/TenkenNoSoujiro/TenkenNoSoujiro.github.io/main/genshin-impact.woff) format("woff"),
+    url(https://raw.githubusercontent.com/TenkenNoSoujiro/TenkenNoSoujiro.github.io/main/genshin-impact.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Genshin Impact";
+  src: url(genshin-impact.woff2) format("woff2"),
+    url(genshin-impact.woff) format("woff"),
+    url(genshin-impact.ttf) format("truetype");
+}
+
+:root {
+  font-family: 'HYWenHei', Arial;
+}
+
+body {
+  background-image: url(https://i0.wp.com/traveler.gg/wp-content/uploads/Background.jpg?fit=1920%2C1080&ssl=1);
+}
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.sidebar li {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 20px 0px 50px 0px;
+}
+
+.sidebar h3 {
+  position: relative;
+  top: -10px;
+  left: 2%;
+  color: white;
+  font-weight: 400;
+  width: 20%;
+}
+
+.sidebar img {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
+}
+
+.rarity-2 {
+  background-image: url(https://rerollcdn.com/STARRAIL/Rarity/2_sm.png) !important;
+}
+
+.rarity-2,
+.rarity-3 {
+  background-size: contain !important;
+  background-position: 50% !important;
+}
+
+.rarity-3 {
+  background-image: url(https://rerollcdn.com/STARRAIL/Rarity/3_sm.png) !important;
+}
+
+.rarity-4 {
+  background-image: url(https://rerollcdn.com/STARRAIL/Rarity/4_sm.png) !important;
+}
+
+.rarity-4:hover {
+  filter: drop-shadow(-2px 0px 8px #DA70D6);
+}
+
+.rarity-4,
+.rarity-5 {
+  background-size: contain !important;
+  background-position: 50% !important;
+  transition: filter 0.1s ease-out;
+}
+
+.rarity-5 {
+  background-image: url(https://rerollcdn.com/STARRAIL/Rarity/5_sm.png) !important;
+}
+
+.rarity-5:hover {
+  filter: drop-shadow(0px 0px 5px gold);
+}
+
+.raiden-is-annoying-to-code {
+  left: 2.25% !important;
+}
+
+.ganyu-is-also-annoying-to-code {
+  left: 2.75% !important;
+}
+
+.portrait {
+  position: absolute;
+  top: 22%;
+  left: 45%;
+}
+
+.beegheader {
+  color: white;
+  font-size: 72px;
+  position: absolute;
+  top: 10%;
+  left: 35%;
+}
+
+.portrait img {
+  width: auto;
+}
+
+.talents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: absolute;
+  top: 85%;
+  left: 20%;
+
+}
+
+.talent {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: filter 0.2s ease-in-out;
+  width: 110px;
+}
+
+
+.anemo .talent:hover {
+  filter: drop-shadow(0px 0px 6px #59cda9);
+}
+
+.talent-tooltip {
+  border: 4px solid #24285a;
+  border-radius: 6px;
+  background: #303b7a;
+  color: white;
+  padding: 20px;
+}
+
+.talent-tooltip h1 {
+  font-weight: 400;
+  padding: 20px;
+}
+
+.talent-tooltip img {
+	text-align: center;
+	width: 100%;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a>
+            <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Anemo).png">
+            <h3>Traveler</h3>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img class="rarity-4" src="https://rerollcdn.com/GENSHIN/Characters/1/Bennett.png">
+            <h3>Bennett</h3>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Raiden.png">
+            <h3 class="raiden-is-annoying-to-code">Raiden <br>Shogun</h3>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Ganyu.png">
+            <h3 class="ganyu-is-also-annoying-to-code">Ganyu</h3>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="char-info">
+      <div class="beegheader">
+        Traveler <img src="https://rerollcdn.com/GENSHIN/UI/element_anemo.png">
+      </div>
+      <div class="portrait">
+        <img id="portrait" src="https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Character_Traveler_Male_Game.png">
+      </div>
+      <div class="talents anemo">
+        <img class="talent" id="normal" src="https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png">
+        <img class="talent"  id="skill" src="https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Palm_Vortex.png">
+        <img class="talent" id="burst" src="https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Gust_Surge.png">
+		<div class="talent-tooltip">
+			<h1 id="talent-name"> Foreign Ironwind</h1>
+			<img src="https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif">
+		</div>
+      </div>
+    </div>
+    <script>
+      var i = 0;
+
+const characters = [{
+    name: "Traveler",
+    img: "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Character_Traveler_Male_Game.png",
+    element: "anemo",
+    normal: "Foreign Ironwind",
+    normalImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
+    normalPreview: "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif",
+
+    skill: "Palm Vortex",
+    skillImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Palm_Vortex.png",
+    skillPreview: "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Palm_Vortex_Hold_%28Aether%29_Preview.gif",
+
+    burst: "Gust Surge",
+    burstImg: "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Gust_Surge.png",
+    burstPreview: "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Gust_Surge_%28Aether%29_Preview.gif"
+  },
+  {
+    name: "Bennett",
+    img: "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Character_Traveler_Male_Game.png",
+    element: "pyro",
+    normal: "Strike of Fortune",
+    normalImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png",
+    normalPreview: "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif",
+
+    skill: "Passion Overload",
+    skillImg: "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png",
+    skillPreview: "static.wikia.nocookie.net/gensin-impact/images/2/25/Passion_Overload_L2_Preview.gif",
+
+    burst: "Fantastic Voyage",
+    burstImg: "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png",
+    burstPreview: "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Fantastic_Voyage_Preview.gif"
+  },
+  {
+
+  },
+  {
+
+  }
+];
+
+const charData = characters[i];
+
+
+
+
+
+$(".sidebar img:nth-child(1)").click(function() {
+  i = 0;
+
+});
+
+$(".sidebar img:nth-child(2)").click(function() {
+  i = 1;
+});
+
+$(".sidebar img:nth-child(3)").click(function() {
+  i = 2;
+});
+
+$(".sidebar img:nth-child(4)").click(function() {
+  i = 3;
+});
+
+$(".sidebar img").click(function() {
+      $(".beegheader).html(`${charData.name}`);
+	  $(".beegheader > img").attr("src", `https://rerollcdn.com/GENSHIN/UI/element_${charData.element}.png`);
+      $("#portrait").attr("src", `${charData.img}`);
+	  $("#normal").attr("src", `${charData.normalImg}`);
+	  $("#skill").attr("src", `${charData.skill}`);
+	  $("#burst").attr("src", `${charData.burst}`);
+
+});
+
+    </script>
+  </body>
+
+</html>
