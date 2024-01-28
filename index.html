@@ -209,12 +209,11 @@ body {
         <img class="talent" id="burst" src="https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Gust_Surge.png">
       </div>
 	<div class="talent-tooltip">
-		<h1 id="talent-name"> Foreign Ironwind</h1>
-		<img src="https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif">
+		<h1 id="talent-name">Foreign Ironwind</h1>
+		<img id="preview" src="https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif">
 	</div>
     </div>
     <script>
-      var i = 0;
 
 const characters = [{
     name: "Traveler",
@@ -256,39 +255,20 @@ const characters = [{
   }
 ];
 
-const charData = characters[i];
-
-
-
-
-
-$(".sidebar img:nth-child(1)").click(function() {
-  i = 0;
-
+$("#normal").click(function() {
+	$("#talent-name").html("Foreign Ironwind");
+	$("#preview").attr("src", "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif");
 });
 
-$(".sidebar img:nth-child(2)").click(function() {
-  i = 1;
+$("#skill").click(function() {
+	$("#talent-name").html("Palm Vortex");
+	$("#preview").attr("src", "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Palm_Vortex_Hold_%28Aether%29_Preview.gif");
 });
 
-$(".sidebar img:nth-child(3)").click(function() {
-  i = 2;
+$("#normal").click(function() {
+	$("#talent-name").html("Gust Surge");
+	$("#preview").attr("src", "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Gust_Surge_%28Aether%29_Preview.gif");
 });
-
-$(".sidebar img:nth-child(4)").click(function() {
-  i = 3;
-});
-
-$(".sidebar img").click(function() {
-      $(".beegheader).html(`${charData.name}`);
-	  $(".beegheader > img").attr("src", `https://rerollcdn.com/GENSHIN/UI/element_${charData.element}.png`);
-      $("#portrait").attr("src", `${charData.img}`);
-	  $("#normal").attr("src", `${charData.normalImg}`);
-	  $("#skill").attr("src", `${charData.skill}`);
-	  $("#burst").attr("src", `${charData.burst}`);
-
-});
-
     </script>
   </body>
 
