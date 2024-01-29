@@ -173,25 +173,25 @@
     <div class="sidebar">
       <ul>
         <li>
-          <a>
+          <a href="https://wither19.github.io/genshin">
             <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Traveler%20(Anemo).png">
             <h3>Traveler</h3>
           </a>
         </li>
         <li>
-          <a>
+          <a href="https://wither19.github.io/genshin/bennett">
             <img class="rarity-4" src="https://rerollcdn.com/GENSHIN/Characters/1/Bennett.png">
             <h3>Bennett</h3>
           </a>
         </li>
         <li>
-          <a>
+          <a href="https://wither19.github.io/genshin/raiden">
             <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Raiden.png">
             <h3 class="raiden-is-annoying-to-code">Raiden <br>Shogun</h3>
           </a>
         </li>
         <li>
-          <a>
+          <a href="https://wither19.github.io/genshin/ganyu">
             <img class="rarity-5" src="https://rerollcdn.com/GENSHIN/Characters/1/Ganyu.png">
             <h3 class="ganyu-is-also-annoying-to-code">Ganyu</h3>
           </a>
@@ -211,51 +211,11 @@
         <img class="talent" id="burst" src="https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png">
       </div>
       <div class="talent-tooltip">
-        <h1 id="talent-name">Foreign Ironwind</h1>
+        <h1 id="talent-name">Strike of Fortune</h1>
         <img id="preview" src="https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif">
       </div>
     </div>
     <script>
-      const characters = [{
-          name: "Traveler",
-          img: "https://static.wikia.nocookie.net/gensin-impact/images/a/a1/Character_Traveler_Male_Game.png",
-          element: "anemo",
-          normal: "Foreign Ironwind",
-          normalImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/04/Sword_Anemo.png",
-          normalPreview: "https://static.wikia.nocookie.net/gensin-impact/images/0/02/Aether_Normal_Preview.gif",
-
-          skill: "Palm Vortex",
-          skillImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/07/Talent_Palm_Vortex.png",
-          skillPreview: "https://static.wikia.nocookie.net/gensin-impact/images/9/91/Palm_Vortex_Hold_%28Aether%29_Preview.gif",
-
-          burst: "Gust Surge",
-          burstImg: "https://static.wikia.nocookie.net/gensin-impact/images/9/98/Talent_Gust_Surge.png",
-          burstPreview: "https://static.wikia.nocookie.net/gensin-impact/images/4/42/Gust_Surge_%28Aether%29_Preview.gif"
-        },
-        {
-          name: "Bennett",
-          img: "https://static.wikia.nocookie.net/gensin-impact/images/1/1b/Character_Bennett_Game.png",
-          element: "pyro",
-          normal: "Strike of Fortune",
-          normalImg: "https://static.wikia.nocookie.net/gensin-impact/images/0/0d/Sword_Pyro.png",
-          normalPreview: "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif",
-
-          skill: "Passion Overload",
-          skillImg: "https://static.wikia.nocookie.net/gensin-impact/images/6/66/Talent_Passion_Overload.png",
-          skillPreview: "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Passion_Overload_L2_Preview.gif",
-
-          burst: "Fantastic Voyage",
-          burstImg: "https://static.wikia.nocookie.net/gensin-impact/images/a/a2/Talent_Fantastic_Voyage.png",
-          burstPreview: "https://static.wikia.nocookie.net/gensin-impact/images/4/4a/Fantastic_Voyage_Preview.gif"
-        },
-        {
-
-        },
-        {
-
-        }
-      ];
-
       $("#normal").click(function() {
         $("#talent-name").html("Strike of Fortune");
         $("#preview").attr("src", "https://static.wikia.nocookie.net/gensin-impact/images/5/54/Strike_of_Fortune_Normal_Preview.gif");
